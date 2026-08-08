@@ -1384,44 +1384,44 @@ p {
   /* =====================================
        NOSOTROS
        ===================================== */
-
   .nosotros-principal,
   .historia {
-    width: 94%;
-    margin: 35px auto;
-    gap: 18px;
+    width: 92%;
+    margin: 25px auto;
+    gap: 12px;
   }
 
   .texto-nosotros h2,
   .texto-historia h2 {
-    font-size: 1.7rem;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
   }
 
   .texto-nosotros p,
   .texto-historia p {
-    font-size: 0.84rem;
-    line-height: 1.5;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 7px;
   }
 
   .tarjetas-nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 8px;
     width: 94%;
-    margin: 30px auto;
+    margin: 20px auto;
   }
 
   .card-nosotros {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
   }
-
   .card-nosotros p,
   .card-nosotros li {
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.7rem;
+    line-height: 1.35;
   }
-
   /* =====================================
        PRODUCTOS
        ===================================== */
