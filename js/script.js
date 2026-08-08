@@ -6,7 +6,6 @@ const botonesProceso = document.querySelectorAll(".btn-proceso");
 
 const modalProducto = document.getElementById("modal-producto");
 const cerrarModal = document.getElementById("cerrar-modal");
-
 const tituloModal = document.getElementById("titulo-modal");
 const textoModal = document.getElementById("texto-modal");
 const procesoModal = document.getElementById("proceso-modal");
@@ -45,9 +44,10 @@ if (
         procesoModal.innerHTML = `
           <p>
             La producción de miel comienza cuando las abejas recolectan el
-            néctar de las flores y lo llevan a la colmena. Allí, el néctar se
-            transforma y se almacena en los panales. Cuando la miel está madura,
-            se extrae de los panales, se filtra y se envasa para su consumo.
+            néctar de las flores y lo llevan a la colmena. Allí, el néctar
+            se transforma y se almacena en los panales. Cuando la miel está
+            madura, se extrae de los panales, se filtra y se envasa para
+            su consumo.
           </p>
         `;
       } else if (producto === "pescado") {
@@ -57,11 +57,11 @@ if (
 
         procesoModal.innerHTML = `
           <p>
-            La producción comienza con la cría de tilapias rojas y negras en
-            estanques, donde reciben alimentación y cuidados adecuados. Cuando
-            alcanzan el tamaño ideal, se realiza la pesca y selección de los
-            ejemplares. Finalmente, se limpian, preparan y empacan para su
-            comercialización y consumo.
+            La producción comienza con la cría de tilapias rojas y negras
+            en estanques, donde reciben alimentación y cuidados adecuados.
+            Cuando alcanzan el tamaño ideal, se realiza la pesca y selección
+            de los ejemplares. Finalmente, se limpian, preparan y empacan
+            para su comercialización y consumo.
           </p>
         `;
       }
@@ -83,19 +83,17 @@ const botonesGaleria = document.querySelectorAll(".filtros-galeria button");
 
 const elementosGaleria = document.querySelectorAll(".galeria-item");
 
-if (botonesGaleria.length > 0 && elementosGaleria.length > 0) {
+if (botonesGaleria.length > 0) {
   botonesGaleria.forEach(function (boton) {
     boton.addEventListener("click", function () {
       const filtro = boton.dataset.filter;
 
-      // Cambiar botón activo
       botonesGaleria.forEach(function (btn) {
         btn.classList.remove("activo");
       });
 
       boton.classList.add("activo");
 
-      // Mostrar u ocultar elementos
       elementosGaleria.forEach(function (elemento) {
         if (filtro === "todos") {
           elemento.style.display = "block";
@@ -110,7 +108,7 @@ if (botonesGaleria.length > 0 && elementosGaleria.length > 0) {
 }
 
 // ========================================
-// VISOR DE IMÁGENES DE LA GALERÍA
+// VISOR DE IMÁGENES
 // ========================================
 
 const imagenesGaleria = document.querySelectorAll(".galeria-item img");
@@ -136,7 +134,6 @@ if (imagenesGaleria.length > 0 && visorGaleria && imagenVisor && cerrarVisor) {
     imagenVisor.src = "";
   });
 
-  // Cerrar haciendo clic fuera de la imagen
   visorGaleria.addEventListener("click", function (event) {
     if (event.target === visorGaleria) {
       visorGaleria.classList.remove("mostrar");
@@ -156,25 +153,29 @@ if (formulario) {
   formulario.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // Obtener información del formulario
+    // Obtener información
     const nombre = document.getElementById("nombre").value.trim();
+
     const correo = document.getElementById("correo").value.trim();
+
     const telefono = document.getElementById("telefono").value.trim();
+
     const mensaje = document.getElementById("mensaje").value.trim();
 
-    // Validar campos
+    // Validar
     if (nombre === "" || correo === "" || telefono === "" || mensaje === "") {
       alert("Por favor, completa todos los campos.");
+
       return;
     }
 
-    // Número de WhatsApp de Colombia
+    // Número de WhatsApp
     const numeroWhatsApp = "573177428666";
 
     // Crear mensaje
     const texto =
       "Hola, Finca El Chaparral.\n\n" +
-      "Nuevo mensaje desde la página web\n\n" +
+      "Nuevo mensaje desde la página web.\n\n" +
       "Nombre: " +
       nombre +
       "\n" +
@@ -187,11 +188,14 @@ if (formulario) {
       "Mensaje: " +
       mensaje;
 
-    // Crear enlace de WhatsApp
+    // Crear enlace
     const url =
       "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
 
-    // Ir a WhatsApp
+    // Mensaje al usuario
+    alert("Tu mensaje está listo. Se abrirá WhatsApp para enviarlo.");
+
+    // Abrir WhatsApp
     window.location.href = url;
   });
 }
