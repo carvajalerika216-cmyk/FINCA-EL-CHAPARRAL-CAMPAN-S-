@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FINCA EL CHAPARRAL ALBER PEREZ</title>
-
+    
+    <link rel="stylesheet" href="css/normalize.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -38,37 +39,147 @@
 
 </header>
 
+<!-- TARJETA DE INFORMACIÓN -->
 
-<section id ="Productos"> 
-            <h3>Nuestros Productos </h3>
-        <article>  
-            <h3> Campan's Café </h3>
-            <p> Cafe de origen cultivado en nuestra finca.</p>
-        </article>
+<div id="modal-producto" class="modal-producto">
 
-        <article> 
-            <h3> Campan's Miel </h3>
-            <p> Miel 100% natural.</p>
-        </article>
+    <div class="contenido-modal">
 
-        <article> 
-            <h3>  mekato y bebidas  </h3>
-        <p> snacks y bebidas para nuestros visitantes </p> 
-    </article>
+        <button id="cerrar-modal" class="cerrar-modal">
+            ×
+        </button>
 
-      <article> 
-        <h3> Pescado fresco </h3>
-        <p> Venta de pescado fresco por kilogramos  </p> 
-    </article>
+        <h2 id="titulo-modal"></h2>
 
-    <article>
-        <h3> Almuerzos</h3>
-        <p> Preparación de deliciosos al muerzos con los pescados de la finca </p>
-    </article> 
-        </section>
+        <p id="texto-modal"></p>
 
+        <div id="proceso-modal"></div>
+
+    </div>
+
+</div>
+
+<main>
+
+<h2>Nuestros Productos</h2>
+
+<div class="contenedor-productos">
+
+    <!-- Café -->
+    <div class="card-producto">
+
+        <img src="imagenes/cafe..jpeg" alt="Campan's Café">
+
+        <div class="contenido">
+
+            <h3> Campan's Café</h3>
+
+            <p>
+                Café de origen cultivado con dedicación en nuestra finca.
+            </p>
+
+            <button class="btn-proceso" data-producto="cafe">
+    Conoce el proceso
+</button>
+
+            <div class="proceso"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Miel -->
+    <div class="card-producto">
+
+        <img src="imagenes/miel..jpeg" alt="Campan's Miel">
+
+        <div class="contenido">
+
+            <h3> Campan's Miel</h3>
+
+            <p>
+                Miel 100% natural producida de manera artesanal.
+            </p>
+
+           <button class="btn-proceso" data-producto="miel">
+    Conoce el proceso
+</button>
+
+            <div class="proceso"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Pescado -->
+    <div class="card-producto">
+
+        <img src="imagenes/pescado.jpeg" alt="Campan's Pescado">
+
+        <div class="contenido">
+
+            <h3> Campan's Pescado</h3>
+
+            <p>
+                Pescado criado en estanques naturales, fresco y de excelente calidad para ofrecer un sabor auténtico en cada plato.
+            </p>
+
+            <button class="btn-proceso">
+                Conoce el proceso
+            </button>
+
+            <div class="proceso"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Almuerzos -->
+    <div class="card-producto">
+
+        <img src="imagenes/almuerzos.jpeg" alt="Almuerzos">
+
+        <div class="contenido">
+
+            <h3>  Almuerzos</h3>
+
+            <p>
+                Deliciosos platos preparados con ingredientes frescos de nuestra finca.
+            </p>
+
+            <button class="btn-info">
+                Ver más
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Mekato -->
+    <div class="card-producto">
+
+        <img src="imagenes/mekato.jpeg" alt="Mekato y bebidas">
+
+        <div class="contenido">
+
+            <h3>Mekato y bebidas</h3>
+
+            <p>
+                Bebidas y snacks para acompañar tu visita y disfrutar de un momento especial.
+            </p>
+
+            <button class="btn-info">
+                Ver más
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 </main>
+
 
 <footer class="footer">
 
@@ -131,5 +242,6 @@ Diseño y desarrollo web: Erika Carvajal
 </div>
 
 </footer>
+<script src="js/script.js"></script>
 </body>
 </html>
