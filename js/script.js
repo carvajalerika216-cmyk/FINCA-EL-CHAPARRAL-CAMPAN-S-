@@ -196,7 +196,7 @@ if (formulario) {
       "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
 
     // Abrir WhatsApp
-    window.open(url, "_blank");
+    window.location.href = url;
 
     // Limpiar formulario
     formulario.reset();
