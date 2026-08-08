@@ -158,21 +158,17 @@ if (formulario) {
 
     // Obtener información del formulario
     const nombre = document.getElementById("nombre").value.trim();
-
     const correo = document.getElementById("correo").value.trim();
-
     const telefono = document.getElementById("telefono").value.trim();
-
     const mensaje = document.getElementById("mensaje").value.trim();
 
     // Validar campos
     if (nombre === "" || correo === "" || telefono === "" || mensaje === "") {
       alert("Por favor, completa todos los campos.");
-
       return;
     }
 
-    // Número de WhatsApp
+    // Número de WhatsApp de Colombia
     const numeroWhatsApp = "573177428666";
 
     // Crear mensaje
@@ -195,10 +191,7 @@ if (formulario) {
     const url =
       "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texto);
 
-    // Abrir WhatsApp
+    // Ir a WhatsApp
     window.location.href = url;
-
-    // Limpiar formulario
-    formulario.reset();
   });
 }
